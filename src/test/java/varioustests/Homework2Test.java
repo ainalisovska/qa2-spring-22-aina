@@ -10,6 +10,7 @@ public class Homework2Test {
     private final String HOME_PAGE_URL = "http://1a.lv";
     private final By FAVORITE_ITEM = By.className("favorite-items__handle");
     private final By LOGO = By.className("main-logo");
+    private final By PRODUCT_CATEGORY = By.className("submenu-lvl1__link");
     private final By SEARCH_INPUT_FIELD = By.id("q");
     private final By SEARCH_BUTTON = By.xpath(".//button[@type = 'submit']");
     private final By ACCEPT_COOKIES_BTN = By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll");
