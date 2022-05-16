@@ -29,9 +29,9 @@ public class Loops {
             System.out.println(studentNames.get(i));
         }
 
-//        for (String name : studentNames) {
-//            System.out.println(name);
-//        }
+//   for (String name : studentNames) {
+////            System.out.println(name);
+////        }
 
         for (String name : studentNames) {
             if (name.startsWith("D")) {

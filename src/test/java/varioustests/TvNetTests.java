@@ -43,14 +43,14 @@ public class TvNetTests {
             System.out.println(i+1 +": " + titles.get(i).getText());
         }
 
-        for (WebElement title : titles) {
-            if (title.getText().startsWith(GIVEN_TITLE)) {
-                title.click();
-                break;
-
-
-            }
-        }
+//        for (WebElement title : titles) {
+//            if (title.getText().startsWith(GIVEN_TITLE)) {
+//                title.click();
+//                break;
+//
+//
+//            }
+//        }
 
 
 
