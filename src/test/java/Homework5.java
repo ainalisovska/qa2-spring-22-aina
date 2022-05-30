@@ -68,7 +68,7 @@ public class Homework5 {
         List<WebElement> items = browser.findElements(PRODUCT_ITEM);
 
         for (WebElement we : items) {
-            if (we.getText().equals("Gludeklis Philips GC5034/20, zila")) {
+            if (we.getText().equals("Gludeklis Electrolux E8SI1-6DBM, zila")) {
                 wait.until(ExpectedConditions.elementToBeClickable(we));
                 try {
                     we.click();

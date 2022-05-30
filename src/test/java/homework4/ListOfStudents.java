@@ -11,7 +11,7 @@ public class ListOfStudents {
 
     @Test
     public void listOfStudents () {
-        List<Object> students = new ArrayList<>();
+        List<Student> students = new ArrayList<>();
 
 
         Student daniel = new Student();
@@ -56,17 +56,26 @@ public class ListOfStudents {
         students.add(renar);
 
 
-        System.out.println(students.get(1));
-        System.out.println(students.size());
 
 
 
 
-
-        for (Object student: students) {
-            System.out.println(student);
-
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println(i+1 +": " + students.get(i).getFirstName());
         }
+
+
+        for (Student student : students) {
+            if (student.getCourse().contentEquals("QA1")) {
+                System.out.println(student.getFirstName() + " is attending course QA1");
+            }
+        }
+
+
+
+
+
+
 
 
 
