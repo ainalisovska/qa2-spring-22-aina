@@ -53,7 +53,6 @@ public class Homework5 {
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(CATEGORY_NAME, 1));
         List<WebElement> subCategoryItems = browser.findElements(CATEGORY_NAME);
 
-
         for (WebElement we : subCategoryItems) {
             if (we.getText().equals("Gludekļi")) {
                 wait.until(ExpectedConditions.elementToBeClickable(we));
