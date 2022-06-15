@@ -14,8 +14,7 @@ public class Homework5 {
     private final By MENU_ITEM = By.xpath(".//li[contains(@class, 'submenu-lvl1__list-item--has-child')]");
     private final By MENU = By.xpath(".//div[@class = 'submenu-lvl1 submenu-lvl1--invisible submenu-lvl1--index']");
     private final String MENU_ITEM_TO_OPEN = "Sadzīves tehnika";
-    private final By PRODUCT_CATEGORY = By.className("submenu-lvl1__link");
-    private final By PRODUCT_SUB_CATEGORY = By.xpath(".//a[contains(@href, 'https://www.1a.lv/c/sadzives-tehnika/')]");
+    private final By MENU_SUB_CATEGORY = By.xpath(".//a[contains(@href, 'https://www.1a.lv/c/sadzives-tehnika/')]");
     private final By CATEGORY_NAME = By.xpath(".//a[@class = 'list-filterable__label']");
     private final By CATALOG_ITEM = By.xpath(".//div[contains(@class, 'catalog-taxons-product--grid-view')]");
     private final By CATALOG_ITEM_NAME = By.xpath(".//a[@class = 'catalog-taxons-product__name']");
@@ -42,7 +41,7 @@ public class Homework5 {
             }
         }
 
-        List<WebElement> catalogueSubCategories = browser.findElements(PRODUCT_SUB_CATEGORY);
+        List<WebElement> catalogueSubCategories = browser.findElements(MENU_SUB_CATEGORY);
 
         for (WebElement we : catalogueSubCategories) {
             if (we.getText().equals("Mājai - mazā sadzīves tehnika")) {
@@ -54,16 +53,14 @@ public class Homework5 {
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(CATEGORY_NAME, 1));
         List<WebElement> subCategoryItems = browser.findElements(CATEGORY_NAME);
 
-        boolean flag = false;
+
         for (WebElement we : subCategoryItems) {
             if (we.getText().equals("Gludekļi")) {
-                flag = true;
                 wait.until(ExpectedConditions.elementToBeClickable(we));
                 we.click();
                 break;
             }
         }
-        Assertions.assertTrue(flag, "Category not found");
 
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(CATALOG_ITEM, 1));
         List<WebElement> catalogItems = browser.findElements(CATALOG_ITEM);
