@@ -21,8 +21,6 @@ public class Homework5 {
     private final By CATALOG_ITEM_NAME = By.xpath(".//a[@class = 'catalog-taxons-product__name']");
     private final By CATALOG_ITEM_PRICE = By.xpath(".//span[@class = 'price']");
 
-
-
     @Test
     public void searchItemTest() {
         System.setProperty("webdriver.chrome.driver", "c://chromedriver.exe");
@@ -79,6 +77,5 @@ public class Homework5 {
 
         WebElement itemPrice = browser.findElement(CATALOG_ITEM_PRICE);
         System.out.println("Product price is " + itemPrice.getText());
-
     }
 }
