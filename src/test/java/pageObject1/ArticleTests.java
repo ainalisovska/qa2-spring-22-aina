@@ -1,8 +1,8 @@
-package pageObject;
+package pageObject1;
 
 import org.junit.jupiter.api.Test;
-import pageObject.pages.BaseFunc;
-import pageObject.pages.HomePage;
+import pageObject1.pages.BaseFunc;
+import pageObject1.pages.HomePage;
 
 public class ArticleTests {
     private final String HOME_PAGE_URL = "tvnet.lv";
@@ -16,6 +16,9 @@ public class ArticleTests {
         HomePage homePage = new HomePage(baseFunc);
 
         homePage.acceptCookies();
+
+//        homePage.getArticleById(); commented because of mistake
+
 
 
 

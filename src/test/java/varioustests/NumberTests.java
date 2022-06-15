@@ -19,29 +19,22 @@ public class NumberTests {
 
 
 //           for (Integer number : numbersList) {
-//               if (number/2) {
+//               if (number. {
 //                   System.out.println(number);
 //               }
 //           }
 
 
 
+           for (int i = 0; i < numbersList.size(); i++) {
+
+            System.out.println(numbersList.get(i));
+        }
 
 
 
 
 
-
-
-
-
-
-
-
-////        for (int i = 0; i < numbersList.size(); i++) {
-//           if
-////            System.out.println(numbersList.get(i));
-////        }
 
 
 

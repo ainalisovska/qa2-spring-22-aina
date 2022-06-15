@@ -47,16 +47,19 @@ public class WebShopTest {
                     System.out.println("Can't click from the first try");
                     we.click();
                 }
-
                 break;
-
-
-
             }
         }
-
-
         Assertions.assertTrue(flag, "Category not found");
+
+
+
+
+
+
+
+
+
 
 
 
