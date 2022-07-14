@@ -13,7 +13,6 @@ public class ListOfStudents {
     public void listOfStudents () {
         List<Student> students = new ArrayList<>();
 
-
         Student daniel = new Student();
         daniel.setFirstName("Daniels");
         daniel.setLastName("Ozolins");
@@ -55,15 +54,9 @@ public class ListOfStudents {
         students.add(slava);
         students.add(renar);
 
-
-
-
-
-
         for (int i = 0; i < students.size(); i++) {
             System.out.println(i+1 +": " + students.get(i).getFirstName());
         }
-
 
         for (Student student : students) {
             if (student.getCourse().contentEquals("QA1")) {
