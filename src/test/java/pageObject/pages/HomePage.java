@@ -10,13 +10,12 @@ public class HomePage {
         private BaseFunc baseFunc;
 
 
-
     // Constructor
     public HomePage(BaseFunc baseFunc) {
         this.baseFunc = baseFunc;
                 //this = этот класс prokladka chtobi peredelatj peremennuju v klasovuju
-
     }
+
 
     // Methods (works with this page objects using locators)
 
@@ -27,7 +26,5 @@ public class HomePage {
     public void searchFor(String textToFind) {
         baseFunc.type(SEARCH_INPUT_FIELD, textToFind);
         baseFunc.pressKey(SEARCH_INPUT_FIELD, Keys.ENTER);
-
     }
-
 }
