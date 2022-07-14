@@ -25,5 +25,4 @@ public class HomePage {
     }
 
     public void pressGoBtn() { baseFunc.click(GO_BTN); }
-
 }

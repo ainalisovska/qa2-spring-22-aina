@@ -22,6 +22,5 @@ public class CatalogTests {
         SearchResultPage resultPage = new SearchResultPage(baseFunc);
         resultPage.openSubCategory(SUBCATEGORY_TO_FIND);
 
-
     }
 }

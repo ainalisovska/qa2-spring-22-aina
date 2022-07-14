@@ -16,7 +16,6 @@ public class BookingTests {
     private final String FILL_IN_LUGGAGE = "4";
     private final String SELECT_FLIGHT_DATE = "12-05-2018";
 
-
     @Test
     public void ticketBookingCheck() {
         BaseFunc baseFunc = new BaseFunc();
@@ -42,7 +41,6 @@ public class BookingTests {
         bookingPage.checkAirports(AIRPORT_FLY_TO);
 
         bookingPage.getPrice();
-
 
     }
 }
