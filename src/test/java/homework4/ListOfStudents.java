@@ -63,25 +63,5 @@ public class ListOfStudents {
                 System.out.println(student.getFirstName() + " is attending course QA1");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
 }
