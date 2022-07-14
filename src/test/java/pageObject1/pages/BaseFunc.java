@@ -17,15 +17,12 @@ public class BaseFunc {
         System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
         browser = new ChromeDriver();
         browser.manage().window().maximize();
-
     }
 
     public void openUrl(String url) {
         if (!url.startsWith("http://") && !url.startsWith("https://")) {
             url = "http://" + url;
-
         }
-
         browser.get(url);
     }
 
