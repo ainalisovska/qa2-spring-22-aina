@@ -19,6 +19,7 @@ public class BookingPage {
     private final By GET_PRICE_BTN = By.xpath(".//span[@style = 'cursor: pointer;']");
     private final By AIRPORT_ABBREVIATION = By.xpath(".//span[@class = 'bTxt']");
     private final By PRICE = By.id("response");
+    private final By BOOK_BTN = By.id("book2");
 
 
     public BookingPage (BaseFunc baseFunc) {
@@ -26,15 +27,10 @@ public class BookingPage {
     }
 
     public void fillInName(String textToFillIn) { baseFunc.type(NAME_INPUT_FIELD, textToFillIn); }
-
     public void fillInSurName(String textToFillIn) { baseFunc.type(SURNAME_INPUT_FIELD, textToFillIn);}
-
     public void fillInDiscount(String textToFillIn) { baseFunc.type(DISCOUNT_INPUT_FIELD, textToFillIn); }
-
     public void fillInAdults(String textToFillIn) { baseFunc.type(ADULTS_INPUT_FIELD, textToFillIn); }
-
     public void fillInChildren(String textToFillIn) { baseFunc.type(CHILDREN_INPUT_FIELD, textToFillIn); }
-
     public void fillInLuggage(String textToFillIn) { baseFunc.type(LUGGAGE_INPUT_FIELD, textToFillIn); }
 
     public void selectFlight(String date) {
@@ -57,16 +53,9 @@ public class BookingPage {
     public void getPrice() {
         WebElement we = baseFunc.findElement(PRICE);
         System.out.println("Price is " + we.getText().replaceAll("\\D+",""));
-
-
-
-
-
-
-
-
     }
 
+    public void pressBookBtn() { baseFunc.click(BOOK_BTN); }
 }
 
 

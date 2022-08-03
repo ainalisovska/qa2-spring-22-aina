@@ -1,8 +1,10 @@
 package pageObject.pages;
 
+import io.netty.buffer.ByteBufInputStream;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -79,5 +81,10 @@ public class BaseFunc {
             System.out.println("Can't click from the first try");
             we.click();
         }
+    }
+
+    public void select(By locator, String value) {
+        Select select = new Select(findElement(locator));
+        select.selectByValue(value);
     }
 }

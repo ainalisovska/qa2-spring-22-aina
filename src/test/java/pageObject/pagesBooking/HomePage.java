@@ -14,14 +14,9 @@ public class HomePage {
         this.baseFunc = baseFunc;
     }
 
-    public void selectFromAirport(String from) {
-        Select selectFlight = new Select(baseFunc.findElement(FLY_FROM_AIRPORT));
-        selectFlight.selectByValue(from);
-    }
-
-    public void selectToAirport(String to) {
-        Select selectAirport = new Select(baseFunc.findElement(FLY_TO_AIRPORT));
-        selectAirport.selectByValue(to);
+    public void selectAirports(String from, String to) {
+        baseFunc.select(FLY_FROM_AIRPORT, from);
+        baseFunc.select(FLY_TO_AIRPORT, to);
     }
 
     public void pressGoBtn() { baseFunc.click(GO_BTN); }
