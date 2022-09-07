@@ -1,13 +1,13 @@
 package pageObject.pagesBooking;
 
-public class Reservation {
+public class TicketReservation {
         private String homePageUrl;
         private String airportFlyFrom;
         private String airportFlyTo;
-        private String Name;
-        private String Surname;
-        private String Discount;
-        private String Adults;
+        private String name;
+        private String surname;
+        private String discount;
+        private String adults;
         private String childrenNumber;
         private String luggage;
         private String flightDate;
@@ -38,35 +38,35 @@ public class Reservation {
         }
 
         public String getName() {
-                return Name;
+                return name;
         }
 
         public void setName(String name) {
-                Name = name;
+                this.name = name;
         }
 
         public String getSurname() {
-                return Surname;
+                return surname;
         }
 
         public void setSurname(String surname) {
-                Surname = surname;
+                this.surname = surname;
         }
 
         public String getDiscount() {
-                return Discount;
+                return discount;
         }
 
         public void setDiscount(String discount) {
-                Discount = discount;
+                this.discount = discount;
         }
 
         public String getAdults() {
-                return Adults;
+                return adults;
         }
 
         public void setAdults(String adults) {
-                Adults = adults;
+                this.adults = adults;
         }
 
         public String getChildrenNumber() {

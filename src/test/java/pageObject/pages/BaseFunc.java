@@ -55,6 +55,10 @@ public class BaseFunc {
         we.sendKeys(text);
     }
 
+    public void type(By locator, int text) {
+        type(locator, String.valueOf(text));
+    }
+
     public void pressKey(By locator, Keys key) {
         findElement(locator).sendKeys(key);
 //        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -72,19 +76,18 @@ public class BaseFunc {
         return driver.findElements(locator);
     }
 
-    public void click(WebElement element) {
-        WebElement we = wait.until(ExpectedConditions.elementToBeClickable(element));
-
-        try {
-            we.click();
-        } catch (ElementClickInterceptedException e) {
-            System.out.println("Can't click from the first try");
-            we.click();
-        }
+    public void click(WebElement we) {
+        wait.until(ExpectedConditions.elementToBeClickable(we)).click();
     }
 
-    public void select(By locator, String value) {
+
+    public void select(By locator, String text) {
         Select select = new Select(findElement(locator));
-        select.selectByValue(value);
+        select.selectByVisibleText(text);
     }
+
+    public void waitForElementCountAtLeast(By locator, int minCount) {
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(locator, minCount));
+    }
+
 }
